@@ -1,98 +1,111 @@
+import Button from "../common/Button";
+import Container from "../common/Container";
+
 export default function Hero() {
-    return (
-        <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+  return (
+    <section className="bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-700 text-white py-24">
+      <Container>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-                {/* Left Side */}
+          {/* Left Side */}
+          <div>
+            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">
+              🎓 Trusted by university students
+            </span>
+
+            <h1 className="text-6xl font-extrabold mt-6 leading-tight">
+              Learn Better.
+              <br />
+              Teach Better.
+            </h1>
+
+            <p className="mt-6 text-indigo-100 text-lg leading-8 max-w-lg">
+              PeerPrep connects students with verified peer tutors to help
+              you master difficult courses, prepare for exams, and build
+              confidence.
+            </p>
+
+            <div className="flex gap-4 mt-10">
+              <Button>Find a Tutor</Button>
+              <Button variant="secondary">
+                Become a Tutor
+              </Button>
+            </div>
+
+            <div className="flex gap-10 mt-12">
+              <div>
+                <h2 className="text-3xl font-bold">500+</h2>
+                <p className="text-indigo-200">Students</p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold">120+</h2>
+                <p className="text-indigo-200">Tutors</p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold">4.9★</h2>
+                <p className="text-indigo-200">Average Rating</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side */}
+          <div className="flex justify-center">
+            <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md">
+
+              <div className="flex items-center gap-4">
+
+                <div className="w-16 h-16 rounded-full bg-indigo-600 flex items-center justify-center text-white text-2xl font-bold">
+                  SC
+                </div>
+
                 <div>
-                    <span className="inline-block bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full font-semibold text-sm">
-                        Trusted by 500+ students
-                    </span>
+                  <h3 className="text-gray-900 text-xl font-bold">
+                    Sarah Chen
+                  </h3>
 
-                    <h1 className="mt-6 text-6xl font-extrabold leading-tight text-gray-900">
-                        Learn smarter
-                        <br />
-                        with <span className="text-indigo-600">peer tutoring</span>
-                    </h1>
-
-                    <p className="mt-6 text-lg text-gray-600 max-w-xl">
-                        Connect with top student tutors on your campus.
-                        Book sessions, get help, and ace your courses —
-                        all in one place.
-                    </p>
-
-                    <div className="mt-10 flex gap-4">
-                        <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-xl font-semibold">
-                            Find a Tutor
-                        </button>
-
-                        <button className="border border-indigo-600 text-indigo-600 px-8 py-4 rounded-xl font-semibold hover:bg-indigo-50">
-                            Become a Tutor
-                        </button>
-                    </div>
-
-                    <div className="flex gap-8 mt-10 text-sm text-gray-600">
-                        <span>✅ Free for students</span>
-                        <span>✅ Verified tutors</span>
-                        <span>✅ Flexible scheduling</span>
-                    </div>
+                  <p className="text-gray-500">
+                    Computer Science
+                  </p>
                 </div>
 
-                {/* Right Side */}
-                <div className="bg-white rounded-3xl shadow-xl p-8">
+              </div>
 
-                    <div className="flex justify-between items-center">
+              <div className="mt-8 space-y-4">
 
-                        <div className="flex gap-4 items-center">
-
-                            <div className="h-16 w-16 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold text-xl">
-                                JD
-                            </div>
-
-                            <div>
-                                <h3 className="font-bold text-xl">
-                                    James D.
-                                </h3>
-
-                                <p className="text-gray-500">
-                                    Computer Science • Senior
-                                </p>
-                            </div>
-
-                        </div>
-
-                        <span className="text-yellow-500 font-bold">
-                            ⭐ 4.9
-                        </span>
-
-                    </div>
-
-                    <div className="mt-8 space-y-5">
-
-                        <div className="flex justify-between border rounded-xl p-4">
-                            <span>Subject</span>
-                            <strong>Data Structures</strong>
-                        </div>
-
-                        <div className="flex justify-between border rounded-xl p-4">
-                            <span>Next Available</span>
-                            <strong>Today, 3:00 PM</strong>
-                        </div>
-
-                        <div className="flex justify-between border rounded-xl p-4">
-                            <span>Rate</span>
-                            <strong>$20/hour</strong>
-                        </div>
-
-                    </div>
-
-                    <button className="mt-8 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-4 rounded-xl font-semibold">
-                        Book Now
-                    </button>
-
+                <div className="flex justify-between">
+                  <span className="text-gray-500">Subject</span>
+                  <span className="font-semibold text-gray-800">
+                    Data Structures
+                  </span>
                 </div>
+
+                <div className="flex justify-between">
+                  <span className="text-gray-500">Rate</span>
+                  <span className="font-semibold text-gray-800">
+                    $18/hr
+                  </span>
+                </div>
+
+                <div className="flex justify-between">
+                  <span className="text-gray-500">Rating</span>
+                  <span className="font-semibold text-yellow-500">
+                    ⭐ 4.9
+                  </span>
+                </div>
+
+              </div>
+
+              <button className="mt-8 w-full bg-indigo-600 text-white py-3 rounded-xl hover:bg-indigo-700 transition">
+                View Profile
+              </button>
 
             </div>
-        </section>
-    );
+          </div>
+
+        </div>
+      </Container>
+    </section>
+  );
 }

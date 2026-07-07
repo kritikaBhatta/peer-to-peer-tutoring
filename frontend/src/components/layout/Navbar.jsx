@@ -1,41 +1,69 @@
-import{Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
+import Button from "../common/Button";
+
 export default function Navbar() {
-    return(
-        <nav className='bg-white shadow-sm border-b border-gray-200'>
-            <div className='max-w-7xl mx-auto flex items-center justify-between px-6 py-4'>
-                    <Link to="/" className='text-2xl font-bold text-indigo-600'>peerprep</Link>
+  return (
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-                <ul className='flex items-center gap-8'>
-                    <li>
-                        <Link to="/" className='hover:text-indigo-600'>Home</Link>
-                    </li>
+        {/* Logo */}
+        <Link
+          to="/"
+          className="text-3xl font-extrabold text-indigo-600"
+        >
+          PeerPrep
+        </Link>
 
-                    <li>
-                        <Link to="/tutor" className='hover:text-indigo-600'>Find Tutor</Link>
-                    </li>
+        {/* Navigation */}
+        <nav>
+          <ul className="hidden md:flex items-center gap-8 font-medium text-gray-700">
 
-                    <li>
-                        <Link to="/become-tutor" className='hover:text-indigo-600'>Become a Tutor</Link>
-                    </li>
+            <li>
+              <Link to="/" className="hover:text-indigo-600 transition">
+                Home
+              </Link>
+            </li>
 
-                    <li>
-                        <Link to="/about" className='hover:text-indigo-600'>About</Link>
-                    </li>
-                </ul> 
+            <li>
+              <Link to="/tutor" className="hover:text-indigo-600 transition">
+                Find Tutors
+              </Link>
+            </li>
 
+            <li>
+              <Link
+                to="/become-tutor"
+                className="hover:text-indigo-600 transition"
+              >
+                Become a Tutor
+              </Link>
+            </li>
 
-                {/* buttons */}
+            <li>
+              <Link to="/about" className="hover:text-indigo-600 transition">
+                About
+              </Link>
+            </li>
 
-                <div className='flex gap-3'>
-                    <Link to="/login">
-                        <button className="px-4 py-2 rounded-md border border-indigo-600 text-indigo-600 hover:bg-indigo-50">Login</button>
-                    </Link>
-
-                    <Link to="/register">
-                        <button className="px-4 py-2 rounded-md border border-indigo-600 text-indigo-600 hover:bg-indigo-50">Register</button>
-                    </Link>
-                </div>
-            </div>
+          </ul>
         </nav>
-    );
+
+        {/* Buttons */}
+        <div className="flex gap-3">
+          <Link to="/login">
+            <Button variant="secondary">
+              Login
+            </Button>
+          </Link>
+
+          <Link to="/register">
+            <Button>
+              Register
+            </Button>
+          </Link>
+        </div>
+
+      </div>
+    </header>
+  );
 }
