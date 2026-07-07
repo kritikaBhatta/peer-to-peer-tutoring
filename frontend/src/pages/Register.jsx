@@ -1,10 +1,13 @@
+import RegisterForm from "../components/auth/RegisterForm";
+
 export default function Register() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md max-w-md w-full text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">SCreate an Account.</h2>
-        <p className="text-gray-500 mb-6">Join peer prep as a student or peer tutor.</p>
-      </div>
+    <div className="max-w-md mx-auto py-16">
+      <h1 className="text-3xl font-bold mb-8 text-center">
+        Create Your Account
+      </h1>
+
+      <RegisterForm />
     </div>
   );
 }
